@@ -5,19 +5,13 @@ export default function diagonalDifference(arr) {
     let a = 0, b = 0
 
     for (let i = 0; i < arr.length; i++) {
-
-        let c = arr.length - 1
-
-        if (i > 0) {
-            c -= i
-        }
-
-        a += arr[i][i]
-        b += arr[i][c]
         
+        a += arr[i][i]
+        b += arr[i][arr.length-i-1]
+
     }
 
-    res = b - a
+    res = (a-b) < 0 ? (a-b)*-1 : a-b 
 
     return res
 
