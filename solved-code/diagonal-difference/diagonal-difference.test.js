@@ -26,34 +26,57 @@ test('test case 1', () => {
 })
 
 test('test case 2', () => { 
-
-    const res = diagonalDifference([
-        "6 6 7 -10 9 -3 8 9 -1".split(" ").map(i => parseInt(i, 10)),
-        "9 7 -10 6 4 1 6 1 1".split(" ").map(i => parseInt(i, 10)),
-        "-1 -2 4 -6 1 -4 -6 3 9".split(" ").map(i => parseInt(i, 10)),
-        "-8 7 6 -1 -6 -6 6 -7 2".split(" ").map(i => parseInt(i, 10)),
-        "-10 -4 9 1 -7 8 -5 3 -5".split(" ").map(i => parseInt(i, 10)),
-        "-8 -3 -4 2 -3 7 -5 1 -5".split(" ").map(i => parseInt(i, 10)),
-        "-2 -7 -4 8 3 -1 8 2 3".split(" ").map(i => parseInt(i, 10)),
-        "-3 4 6 -7 -7 -8 -3 9 -6".split(" ").map(i => parseInt(i, 10)),
-        "-2 0 5 4 4 4 -3 3 0".split(" ").map(i => parseInt(i, 10)),
-    ])
+    
+    let dataNumber = "6 6 7 -10 9 -3 8 9 -1 9 7 -10 6 4 1 6 1 1 -1 -2 4 -6 1 -4 -6 3 9 -8 7 6 -1 -6 -6 6 -7 2 -10 -4 9 1 -7 8 -5 3 -5 -8 -3 -4 2 -3 7 -5 1 -5 -2 -7 -4 8 3 -1 8 2 3 -3 4 6 -7 -7 -8 -3 9 -6 -2 0 5 4 4 4 -3 3 0"
+    dataNumber = dataNumber.split(" ").map(i => parseInt(i, 10))
+    
+    let dataOrder = 0
+    const howMuchDataNeeded = 9
+    
+    let arr = new Array(howMuchDataNeeded)
+    
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(howMuchDataNeeded)
+    }
+    
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = dataNumber[dataOrder]
+            dataOrder += 1
+        }
+    }
+    
+    const res = diagonalDifference(arr)
     
     expect(res).toBe(52)
-    
+
 })
 
 test('test case 3', () => { 
+
+    let dataNumber = "-10 3 0 5 -4 2 -1 0 2 -8 9 -2 -5 6 0 9 -7 4 8 -2 3 7 8 -5 0"
+    dataNumber = dataNumber.split(" ").map(i => parseInt(i, 10))
+
+    let dataOrder = 0
+    const howMuchDataNeeded = 5
+
+    let arr = new Array(howMuchDataNeeded)
+
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(howMuchDataNeeded)
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = dataNumber[dataOrder]
+            dataOrder += 1
+        }
+    }
     
-    const res = diagonalDifference([
-        "-10 3 0 5 -4".split(" ").map(i => parseInt(i, 10)),
-        "2 -1 0 2 -8".split(" ").map(i => parseInt(i, 10)),
-        "9 -2 -5 6 0".split(" ").map(i => parseInt(i, 10)),
-        "9 -7 4 8 -2".split(" ").map(i => parseInt(i, 10)),
-        "3 7 8 -5 0".split(" ").map(i => parseInt(i, 10)),
-    ])
+    const res = diagonalDifference(arr)
     
     expect(res).toBe(3)
+
 })
  
 test('test case 4', () => { 
