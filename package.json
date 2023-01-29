@@ -8,7 +8,8 @@
     "test": "jest",
     "test-solved-me-first": "npx jest --runTestsByPath ./solved-code/solved-me-first/solve-me-first.test.js",
     "test-simple-array-sum": "npx jest --runTestsByPath ./solved-code/simple-array-sum/simple-array-sum.test.js",
-    "test-compare-the-triplets": "npx jest --runTestsByPath ./solved-code/compare-the-triplets/compare-the-triplets.test.js"
+    "test-compare-the-triplets": "npx jest --runTestsByPath ./solved-code/compare-the-triplets/compare-the-triplets.test.js",
+    "test-a-very-big-sum": "npx jest --runTestsByPath ./solved-code/a-very-big-sum/a-very-big-sum.test.js"
   },
   "repository": {
     "type": "git",
