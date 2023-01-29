@@ -6,7 +6,8 @@
   "main": "test/index.js",
   "scripts": {
     "test": "jest",
-    "test-solved-me-first": "npx jest --runTestsByPath ./solved-code/solved-me-first/solve-me-first.test.js"
+    "test-solved-me-first": "npx jest --runTestsByPath ./solved-code/solved-me-first/solve-me-first.test.js",
+    "test-simple-array-sum": "npx jest --runTestsByPath ./solved-code/simple-array-sum/simple-array-sum.test.js"
   },
   "repository": {
     "type": "git",
