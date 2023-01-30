@@ -11,7 +11,8 @@
     "test-compare-the-triplets": "npx jest --runTestsByPath ./solved-code/compare-the-triplets/compare-the-triplets.test.js",
     "test-a-very-big-sum": "npx jest --runTestsByPath ./solved-code/a-very-big-sum/a-very-big-sum.test.js",
     "test-diagonal-difference": "npx jest --runTestsByPath ./solved-code/diagonal-difference/diagonal-difference.test.js",
-    "test-plus-minus": "npx jest --runTestsByPath ./solved-code/plus-minus/plus-minus.test.js"
+    "test-plus-minus": "npx jest --runTestsByPath ./solved-code/plus-minus/plus-minus.test.js",
+    "test-staircase": "npx jest --runTestsByPath ./solved-code/staircase/staircase.test.js"
   },
   "repository": {
     "type": "git",
